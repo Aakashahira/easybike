@@ -1,0 +1,81 @@
+<div *ngIf = "service.type == 'user' || service.type == 'dealer'">
+  <div class="container">
+  
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top navbg">
+        <div class="logo-nav">
+             <div class="logo-nav-left">
+               <h1><a class = "navbar-brand ml-5" href="#">EasyBike<span>Perfect Solution</span></a></h1>
+              </div> 
+        </div>
+  
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="top-right">
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        
+                       <ul class="navbar-nav">
+                         <li class="nav-item ml-5 ">
+                           <a class=" text-white nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
+                         </li>
+                         <li class="nav-item ">
+                          <a class="text-white nav-link" routerLink="accessories">Buy Accesories </a>
+                         </li>
+                         <li ngbDropdown class="nav-item dropdown">
+                          <a ngbDropdownToggle class="text-white nav-link dropdown-toggle"  id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+                            <div ngbDropdownMenu class="dropdown-menu dm" aria-labelledby="dropdown01" id="dropdown01">
+                             <li><a class="nav-link dropdown-item" routerLink="newbikes">New Bikes</a> </li> 
+                             <li><a class="nav-link dropdown-item" routerLink="usedbikes">Used Bikes</a></li>  
+                            </div>
+                        </li>
+                        <!-- <li class=" nav-item ">
+                        <a class="text-white nav-link" href="#">Dealers </a>
+                        </li> -->
+                       
+                        <li class=" nav-item User">
+                          <a class="text-white nav-link" routerLink="myCart">cart <i class ="fas fa-shopping-cart"></i></a>
+                          </li>
+                        
+                        <li *ngIf= "!(service.user)" class=" nav-item">
+                        <a class="text-white nav-link" routerLink="login">Login</a>
+                        </li>
+  
+                         <div *ngIf="service.user">
+                          <li ngbDropdown class="nav-item dropdown">
+                            <a ngbDropdownToggle class="text-white nav-link dropdown-toggle"  id="dropdown0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{service.name}}</a>
+                              <div ngbDropdownMenu class="dropdown-menu dm" aria-labelledby="dropdown0" id="dropdown0">
+                                <li *ngIf = "service.type == 'dealer'"><a class="nav-link dropdown-item" routerLink="add-new-bike">Add New Bike</a></li>
+                                <li *ngIf = "service.type == 'dealer'"><a class="nav-link dropdown-item" routerLink="dealerManageBikes">Manage Bikes</a></li>
+                                <li><a class="nav-link dropdown-item" routerLink="myorder">My orders</a></li>
+                                <li *ngIf="service.type == 'user'"><a class = "nav-link dropdown-item" routerLink = "sell-old-bikes">Sell Old Bike</a></li>
+                             
+                                <li> <button (click) = "logout()" class="nav-link changeColor btn btn-success btn-block">Logout</button></li>
+                              </div>
+                          </li>
+  
+  
+                         </div>
+                         <li *ngIf= "!(service.user)" ngbDropdown class="nav-item dropdown">
+                          <a ngbDropdownToggle class="text-white nav-link dropdown-toggle"  id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registration</a>
+                            <div ngbDropdownMenu class="dropdown-menu dm" aria-labelledby="dropdown01" id="dropdown01">
+                             <li><a class="nav-link dropdown-item" routerLink="userSignup">Customer</a> </li> 
+                             <li><a class="nav-link dropdown-item" routerLink="dealerSignup">Dealer</a></li>  
+                            </div>
+                        </li>
+
+
+                        <!-- <li *ngIf= "!(service.user)" class=" nav-item">
+                          <a class="text-white nav-link" routerLink="userSignup">Registration</a>
+                          </li> -->
+                      
+                          
+                        
+                 
+                      </ul>  
+      </div>
+      </div>   
+  </nav>
+  
+  </div>
+  </div>
+  

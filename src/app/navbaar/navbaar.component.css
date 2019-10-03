@@ -1,0 +1,105 @@
+.navbg{
+    background: #1565c0;
+    padding: .7em 0;
+    height: 90px;
+   
+}
+/* .top-right {
+    float: left;
+        } */
+.User
+    { 
+    
+         margin-left: 30pc;
+          
+    }
+    
+  
+
+li a{
+    padding-left: 1em;
+    margin-left: 0.5em;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+	text-decoration: none;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.logo-nav-left h1 a{
+	font-size:1.5em;
+	color:#fff;
+	text-decoration:none;
+}
+.logo-nav-left h1 a span{
+	display: block;
+    font-size: .2em;
+    line-height: 0;
+    text-transform: uppercase;
+    letter-spacing: 11px;
+    color: #fff;
+    padding-left: .3em;
+}
+.dm{
+    margin-top: 2pc;
+    color: #1565c0;
+}
+.dm li a{ 
+ 
+    color: #1565c0;
+    /* border: 1px solid #1565c0 */
+}
+.changeColor{
+    color:  #1565c0;
+    
+}
+
+
+
+
+list-group-item
+{
+    background-color: #333;
+    color: #999;
+    border-color: black;
+   
+}
+
+.sidebaMenu a {
+    text-decoration:none;  
+}
+.sidebarMenu a:hover {
+    color: #fff;
+}
+.bgColor{
+    background-color: #333;
+}
+/* 
+.top-margin {
+
+    margin-top: 5.5pc; 
+} */
+.col-sm-2 {
+    height: 712px;
+    background-color: #333;
+}
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+  }

@@ -1,0 +1,96 @@
+<div class="margintop">
+  <h1 class="text-center">Bike Description</h1>
+  
+<div *ngFor = "let p of product" class="container-fluid">
+  <div class="content-wrapper">	
+  <div class="item-container">	
+    <div class="container">	
+              
+       <div class="col-md-12">
+
+        <!-- <div class="product col-md-3 service-image-left"> -->
+                  <div class="row">
+                      <div class="col-md-3 product">    
+        <!-- <div class="center"></div> -->
+            <img id="item-display" src="{{p.image}}">
+                      
+              </div>
+              
+          <div class="col-md-7">
+        <div class="product-title">{{p.bikeName}}</div>
+        <!-- <div class="product-desc">{{p.description}}</div> -->
+        <!-- <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div> -->
+        <hr>
+        <div class="product-price font-weight-bold"><span class ="text-dark">PKR: </span> {{p.bikePrice}}</div>
+        <div class="product-stock text-danger font-weight-bold">In Stock</div>
+        <hr>
+        
+        
+      </div>
+      
+    </div>
+       </div>
+        <hr>
+        <h1 class="text-dark">Seller Information</h1>
+        <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+        <thead>
+          <tr>
+            <th class="text-center changeColor">
+              Name
+            </th>
+            <th class="text-center changeColor">
+              Contact no:
+            </th>                   
+          </tr>
+          </thead>
+        
+          <tbody>
+           <tr *ngFor = "let d of dealerDetails">
+            <td class ="text-center fonttt">
+              {{d.name}}
+            </td>
+            <td class="text-center fonttt">
+              {{d.phone}}
+            </td>    
+           </tr>
+          </tbody>
+          </table>
+          </div> 
+          </div>
+  </div>
+
+  </div>
+    <div class="container-fluid">		
+    <div class="col-md-12 product-info">
+        <h1 class="text-dark">Product Specification</h1>
+      
+          <hr>
+          <table class="table table-bordered table-hover table-sortable pSpecification" id="tab_logic">
+            <tbody *ngFor = "let p of product">
+            <tr>
+             <td>Frame</td>
+              <td class="bg-white">{{p.Frame}}</td>
+              <td>Starting</td>
+              <td class="bg-white">{{p.starting}}</td> 	
+            </tr>
+            <tr>
+            <td>Brand</td>
+            <td class="bg-white">{{p.bikeBrand}}</td>
+            <td>Engine</td>
+            <td class="bg-white">{{p.engine}}</td>	
+            </tr>
+            <tr>
+       
+            <td>Petrol Capacity</td>
+            <td class="bg-white">{{p.PetrolCapacity}}</td>	
+            </tr>
+          </tbody>
+          </table>
+                      
+      </div>
+      <hr>
+    </div>
+
+</div>
+<!-- </div>
+</div> -->

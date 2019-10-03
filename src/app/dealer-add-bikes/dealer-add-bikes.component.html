@@ -1,0 +1,77 @@
+
+<app-slider-for-all></app-slider-for-all>
+
+<div class="login-box col-md-7">
+    <h1>Add Bike</h1>
+
+    <form [formGroup]="dealerProductForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+            <input type="text" formControlName="productID" class="form-control" placeholder=" product ID" required>
+
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="productName" class="form-control" placeholder=" product Name" required>
+
+        </div>
+        <div class="form-group ">
+            <input type="text" formControlName="bikePrice" class="form-control" placeholder="Price" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="bikeBrand" class="form-control" placeholder="Brand Name" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" formControlName="productQuantity" class="form-control" placeholder="Quantity" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="description" class="form-control" placeholder="Description" required>
+        </div>
+   
+        <div class="form-group">
+            <input type="text" formControlName="Frame" class="form-control" placeholder="Frame" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="Displacement" class="form-control" placeholder="Displacement" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="Dimention" class="form-control" placeholder="Dimention" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="TyreFront" class="form-control" placeholder="Tyre Front" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="clutch" class="form-control" placeholder="clutch" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="dryWeight" class="form-control" placeholder="dry weight" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="starting" class="form-control" placeholder="starting" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="engine" class="form-control" placeholder="engine" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="PetrolCapacity" class="form-control" placeholder="Petrol Capacity" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="compressionRatio" class="form-control" placeholder=" compression Ratio " required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="groundClearance" class="form-control" placeholder="ground Clearance" required>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="transmission" class="form-control" placeholder="transmission" required>
+        </div>
+        
+        <div class="mb-1">
+          <label for="picture">Insert picture</label>
+          <input type="file" (change) = "uploadPicture($event)">
+          <div>{{ uploadPercent | async }}</div>
+          </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="!dealerProductForm.valid" class="btn btn-primary btn-block">Add Bike</button>
+        </div>
+        
+    </form>
+</div> 

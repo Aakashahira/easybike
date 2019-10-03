@@ -1,0 +1,70 @@
+<app-slider-for-all></app-slider-for-all>
+<section class="login-wrap mtb-40 bg-white">
+<div class="container">
+    <div class="row justify-content-center" *ngIf="!error">
+        <div class="col-md-6">
+        <div class="login-box">
+          <h1>Sign Up</h1>
+<form [formGroup] = "dealerSignup" (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+  <input type="text" placeholder="Name" formControlName = "Name"  class="form-control">
+  <div *ngIf="Name.touched && Name.invalid">
+    <div *ngIf = "Name.errors.required" class="text-danger">Name is required</div>
+    <div *ngIf = "Name.errors.minlength"class = "text-danger">Name should be minimum 3 characters</div>
+    <!-- <div *ngIf = "fName.errors.notContainSpace">Space is not allowed</div>     -->
+</div>
+  </div>
+  <div class="form-group">
+  <input type="tel" placeholder="Phone No:" formControlName = "phone"  class="form-control">
+  <div *ngIf="phone.touched && phone.invalid">
+    <div *ngIf = "phone.errors.required" class = "text-danger">Contact no is required</div>
+    <div *ngIf = "phone.errors.minlength"class = "text-danger">Contact no should be valid</div>
+    <div *ngIf = "phone.errors.pattern"class = "text-danger">Contact no should be valid</div>
+    <!-- <div *ngIf = "fName.errors.notContainSpace">Space is not allowed</div>     -->
+</div>
+</div>
+<div class="form-group">
+  <input type="text" placeholder="Shop Name" formControlName = "shopName"  class="form-control">
+  <div *ngIf="shopName.touched && shopName.invalid">
+    <div *ngIf = "shopName.errors.required" class = "text-danger">Shop Name is required</div>
+
+</div>
+  </div>
+  <div class="form-group">
+  <input type="text" placeholder="Bike Brand" formControlName = "bikeBrand"  class="form-control">
+  <div *ngIf="bikeBrand.touched && bikeBrand.invalid">
+    <div *ngIf = "bikeBrand.errors.required" class = "text-danger">Brand Name is required</div>
+
+</div>
+</div>
+<div class="form-group">
+  <input type="email" placeholder="Email" formControlName = "Email"  class="form-control">
+  <div *ngIf="Email.touched && Email.invalid">
+    <div *ngIf = "Email.errors.required" class = "text-danger">Email is required</div>
+    <div *ngIf = "Email.errors.email" class = "text-danger">Email is not valid</div>
+</div>
+</div>
+<div class="form-group">
+<input type="text" placeholder="Shop location" formControlName = "Address"  class="form-control">
+<div *ngIf="Address.touched && Address.invalid">
+  <div *ngIf = "Address.errors.required" class = "text-danger">Addresss is required</div>
+  
+</div>
+</div>
+<div class="form-group"> 
+<input type="password" placeholder="password" formControlName = "password"  class="form-control">
+<div *ngIf="password.touched && password.invalid">
+  <div *ngIf = "password.errors.required" class = "text-danger">Password is required</div>
+  <div *ngIf = "password.errors.minlength" class = "text-danger">password should be more than 6 charactors</div>  
+</div>
+</div> 
+<div class="form-group">
+    <button type="submit" [disabled]="!dealerSignup.valid" class="btn btn-primary btn-block">SignUp</button>
+</div>
+
+  </form>
+</div>
+</div>
+</div>
+</div>
+</section>

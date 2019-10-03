@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="setMargin">
+<section class="content-header ml-4">
+  <h1>
+    Add New Product
+    <small>Accessory</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">Forms</a></li>
+    <li class="active">General Elements</li>
+  </ol>
+</section>
+<section class="content ml-4">
+  <!-- <div class="row"> -->
+    <!-- left column -->
+    <!-- <div class="col-md-6"> -->
+      <!-- general form elements -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Add</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" [formGroup] = "productForm" (ngSubmit) = "onSubmit()">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="productId">Product ID</label>
+              <input type="text" class="form-control" id="productId" placeholder="Product ID" formControlName = "productID">
+            </div>
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" id="productName" placeholder="Name" formControlName = "productName">
+            </div>
+            
+              <div class="form-group">
+                <label for="productPrice">Product Price</label>
+                <input type="text" class="form-control" id="productPrice" placeholder="Price" formControlName = "productPrice">
+              </div>
+             
+              <div class="form-group" >
+                <label>Categories</label>
+                <select class="form-control" formControlName = "category">
+                  <option>Helment</option>
+                  <option>Tyre</option>
+                  <option>Back light</option>
+                  <option>Digital Meters</option>
+                  <option>General</option>
+                </select>
+              </div>
+                
+              <div class="form-group">
+                <label for="productPrice">Product Quantity</label>
+                <input type="text" class="form-control" id="productPrice" placeholder="Quantity" formControlName = "productQuantity">
+              </div>
+               
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" class="form-control" id="description" placeholder="Description" formControlName = "description">
+            </div>
+            <!-- <div class="form-group">
+              <label for="exampleInputFile">File input</label>
+              <input type="file" id="exampleInputFile" formControlName = "image">
+
+            </div> -->
+
+            <div>
+              <input type="file" (change) = "uploadPicture($event)">
+              <div>{{ uploadPercent | async }}</div>
+              </div>
+
+
+          </div>
+          <!-- /.box-body -->
+
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+     
+      </section>
+      </div>
+

@@ -1,0 +1,14 @@
+h1 {
+    margin-top: 25px;
+    color: #1565c0
+}
+.featured-usedbikes-card
+{
+    margin-right: 15pc;
+    margin-left: 15pc;
+    padding-left: 55px; 
+    background-color:white;  
+}
+.fixedSize{
+    height: 400px;
+}

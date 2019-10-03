@@ -1,0 +1,54 @@
+<app-slider-for-all></app-slider-for-all>
+<div class="bg-white">
+<div class="login-box col-md-7">
+  <h1>Sell Old Bike</h1>
+
+  <form [formGroup]="sellerProductForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+          <input type="text" formControlName="productID" class="form-control" placeholder=" product ID" required>
+
+      </div>
+      <div class="form-group">
+          <input type="text" formControlName="bikeName" class="form-control" placeholder=" Bike Name" required>
+
+      </div>
+      <div class="form-group ">
+          <input type="text" formControlName="bikePrice" class="form-control" placeholder="Price" required>
+      </div>
+      <div class="form-group">
+          <input type="text" formControlName="bikeBrand" class="form-control" placeholder="Brand Name" required>
+      </div>
+      
+      
+      <div class="form-group">
+          <input type="text" formControlName="description" class="form-control" placeholder="Description" required>
+      </div>
+        <div class="form-group">
+          <input type="text" formControlName="Frame" class="form-control" placeholder="Frame" required>
+      </div>
+       
+      <div class="form-group">
+          <input type="text" formControlName="starting" class="form-control" placeholder="starting" required>
+      </div>
+      <div class="form-group">
+          <input type="text" formControlName="engine" class="form-control" placeholder="engine" required>
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="PetrolCapacity" class="form-control" placeholder="Petrol Capacity" required>
+    </div>
+      
+      
+      
+      
+      <div class="mb-1">
+        <label for="picture">Insert picture</label>
+        <input type="file" (change) = "uploadPicture($event)">
+        <div>{{ uploadPercent | async }}</div>
+        </div>
+      <div class="form-group">
+          <button type="submit" [disabled]="!sellerProductForm.valid" class="btn btn-primary btn-block">Add Bike</button>
+      </div>
+      
+  </form>
+</div> 
+</div>
